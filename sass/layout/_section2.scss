@@ -1,0 +1,26 @@
+.section2 {
+  background-image: url('https://picsum.photos/id/6/1500/700');
+  height: 70vh;
+  position: relative;
+
+  &-span-top-right {
+    clip-path: polygon(100% 0, 100% 20%, 0 0);
+    background-color: #fff;
+    @include clip-full;
+  }
+  &-span-top-left {
+    clip-path: polygon(0 0, 0 20%, 50% 10%);
+    background-color: $color-cyan;
+    @include clip-full;
+  }
+  &-span-bottom-right {
+    clip-path: polygon(100% 80%, 100% 100%, 35% 100%);
+    background-color: rgba($color-blue, 0.8);
+    @include clip-full;
+  }
+  &-span-bottom-left{
+    clip-path: polygon(0 89%, 0 100%, 35% 100%);
+    background-color: #fff;
+    @include clip-full;
+  }
+}

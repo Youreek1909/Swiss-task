@@ -1,0 +1,89 @@
+.hero {
+  background-image: url('https://picsum.photos/id/579/1500/1000');
+  height: 100vh;
+  position: relative;
+
+  &-span-top {
+    background-color: $color-pink;
+    clip-path: polygon(0 0, 0 30%, 50% 0);
+    @include clip-full;
+  }
+
+  &-span-bottom {
+    clip-path: polygon(50% 92%, 0 100%, 100% 100%);
+    @include clip-full;
+    background-color: #fff;
+  }
+
+  &-span-right {
+    clip-path: polygon(50% 92%, 100% 100%, 100% 84%);
+    @include clip-full;
+    background-color: rgba($color-pink, 0.8);
+  }
+
+  &-logo  {
+    position: absolute;
+    top: 6rem;
+    left: 6rem;
+    width: 15rem;
+
+    &-img {
+      width: 100%;
+      overflow: hidden;
+    }
+  }
+
+  &-nav {
+    position: absolute;
+    top: 7rem;
+    right: 6rem;
+
+    &-list {
+
+      &-item {
+        display: inline-block;
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-left: 5rem;
+
+        &-delang {
+          margin-left: 8rem;
+          margin-right: -2rem;
+        }
+
+        &-link {
+          text-decoration: none;
+          color: #fff;
+
+          &-enlang {
+            color: rgba(#fff, 0.5);
+          }
+        }
+      }
+    }
+  }
+
+  &-info {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    width: 60rem;
+
+    &-text {
+      font-size: 5.5rem;
+      color: #fff;
+      margin-bottom: 4rem;
+    }
+
+    &-link {
+      text-decoration: none;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #fff;
+      text-transform: uppercase;
+      border-bottom: .3rem solid #fff;
+    }
+  }
+}

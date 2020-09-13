@@ -1,0 +1,143 @@
+.contact {
+  &-row {
+    padding: 15rem;
+    display: flex;
+
+    &-col {
+      &-left {
+        width: 40%;
+        margin-right: 5rem;
+
+        &-text {
+          font-size: 2.5rem;
+          color: $color-blue;
+        }
+
+        &-wrapper {
+          display: flex;
+          padding: 2.5rem 0;
+
+          &-avatar {
+            text-align: center;
+            padding: 2rem;
+
+            &-picture {
+              margin-bottom: 1.5rem;
+
+              &-img {
+                width: 100%;
+                overflow: hidden;
+              }
+            }
+            &-name {
+              font-size: 1.2rem;
+              font-weight: bold;
+              margin-bottom: .7rem;
+            }
+            &-work {
+              font-size: 1.2rem;
+            }
+          }
+        }
+
+        &-info {
+          color: $color-blue;
+          font-size: 1.5rem;
+          font-weight: bold;
+          margin-bottom: .8rem;
+
+          &-icon {
+            margin-right: 1rem;
+          }
+        }
+      }
+
+      &-right {
+        width: 60%;
+        padding-top: 2rem;
+
+        &-form {
+
+          & input {
+            font-size: 2rem;
+          }
+
+          & input::placeholder {
+            font-size: 1.3rem;
+          }
+
+          & input:focus {
+            outline: none;
+          }
+
+          &-wrapper {
+            display: flex;
+            margin-bottom: 6rem;
+
+            &-left {
+              width: 50%;
+
+              &-name {
+                width: 90%;
+                border: none;
+                border-bottom: 1px solid #999;
+                padding-bottom: 1.8rem;
+                margin-bottom: 2rem;
+
+              }
+
+              &-email {
+                width: 90%;
+                border: none;
+              }
+            }
+            &-right {
+              width: 50%;
+
+              &-lastname {
+                width: 90%;
+                border: none;
+                border-bottom: 1px solid #999;
+                padding-bottom: 1.8rem;
+                margin-bottom: 2rem;
+              }
+
+              &-phone {
+                border: none;
+              }
+            }
+          }
+
+          &-company,
+          &-message {
+            width: 95%;
+            margin-bottom: 8rem;
+            border: none;
+            border-bottom: 1px solid #999;
+            padding-bottom: 1.8rem;
+            margin-bottom: 2rem;
+          }
+
+          &-company {
+            margin-bottom: 8rem;
+          }
+
+          &-message {
+            margin-bottom: 5rem;
+          }
+        }
+
+        &-btn {
+          background-color: $color-pink;
+          color: #fff;
+          font-size: 1.3rem !important;
+          font-weight: bold;
+          text-transform: uppercase;
+          padding: 1.4rem 2.4rem;
+          border: none;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

@@ -239,6 +239,13 @@ body {
   background-image: url("https://picsum.photos/id/579/1500/1000");
   height: 100vh;
   position: relative; }
+  .hero-background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(90deg, #002140 0%, rgba(0, 33, 64, 0) 100%); }
   .hero-span-top {
     background-color: #EA1E71;
     clip-path: polygon(0 0, 0 30%, 50% 0);

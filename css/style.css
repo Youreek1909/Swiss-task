@@ -56,6 +56,29 @@ body {
     right: 0;
     bottom: 0;
     left: 0; }
+  .section2-slideshow {
+    height: 100%; }
+    .section2-slideshow-slide {
+      height: 100%;
+      display: none; }
+      .section2-slideshow-slide-img {
+        width: 100%;
+        height: 100%; }
+    .section2-slideshow-dots {
+      position: absolute;
+      right: 3%;
+      bottom: 7%; }
+      .section2-slideshow-dots-dot {
+        cursor: pointer;
+        height: 1.2rem;
+        width: 1.2rem;
+        margin: 0 .5rem;
+        border-radius: 50%;
+        border: 2px solid #fff;
+        display: inline-block;
+        transition: background-color 0.5s ease; }
+        .section2-slideshow-dots-dot:hover, .section2-slideshow-dots-dot-active {
+          background-color: #fff; }
 
 .section3 {
   position: relative; }

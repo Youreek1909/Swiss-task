@@ -3,13 +3,13 @@
   background-color: $color-blue;
   padding: 20rem 20rem 4rem 20rem;
 
-  &-span-top-left {
+  &__span-top--left {
     clip-path: polygon(100% 0, 0 0, 0 30%);
     background-color: #fff;
     @include clip-full;
   }
 
-  &-row {
+  &__row {
     display: flex;
     margin-bottom: 8rem;
 
@@ -22,6 +22,7 @@
         &-logo {
           width: 60%;
           padding: 0 4rem;
+
           &-img {
             max-width: 100%;
 
@@ -31,8 +32,10 @@
             }
           }
         }
+
         &-address {
           width: 40%;
+          
           & p {
             color: #fff;
             font-size: 1.4rem;
@@ -50,22 +53,22 @@
         }
       }
 
-      &-right {
+      &--right {
         margin-left: 15rem;
       }
     }
   }
 
-  &-copyright {
+  &__copyright {
     text-align: center;
 
     &-list {
-      &-item {
+      & li {
         display: inline-block;
         margin-right: 1rem;
         font-size: 1.3rem;
 
-        &-link {
+        & a {
           text-decoration: none;
           color: #888;
         }

@@ -1,14 +1,14 @@
 .contact {
-  &-row {
+  &__row {
     padding: 15rem;
     display: flex;
 
     &-col {
-      &-left {
+      &--left {
         width: 40%;
         margin-right: 5rem;
 
-        &-text {
+        & h1 {
           font-size: 2.5rem;
           color: $color-blue;
         }
@@ -24,7 +24,7 @@
             &-picture {
               margin-bottom: 1.5rem;
 
-              &-img {
+              & img {
                 width: 100%;
                 overflow: hidden;
               }
@@ -46,13 +46,13 @@
           font-weight: bold;
           margin-bottom: .8rem;
 
-          &-icon {
+          & i{
             margin-right: 1rem;
           }
         }
       }
 
-      &-right {
+      &--right {
         width: 60%;
         padding-top: 2rem;
 

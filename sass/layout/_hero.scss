@@ -2,6 +2,9 @@
   background-image: url('https://picsum.photos/id/579/1500/1000');
   height: 100vh;
   position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
   &__background {
     @include clip-full;
@@ -32,6 +35,14 @@
     left: 6rem;
     width: 15rem;
 
+    @include respond(laptop) {
+      width: 12rem;
+    }
+
+    @include respond(tablet) {
+      left: 3rem;
+    }
+
     & img {
       width: 100%;
       overflow: hidden;
@@ -43,6 +54,10 @@
     top: 7rem;
     right: 6rem;
 
+    @include respond(tablet) {
+      right: 3rem;
+    }
+
     &-list{
 
       & li {
@@ -52,9 +67,28 @@
         font-weight: bold;
         margin-left: 5rem;
 
+        @include respond(laptop) {
+          font-size: 1.2rem;
+          margin-left: 3rem;
+        }
+
+        @include respond(tablet) {
+          font-size: 1.1rem;
+          margin-left: 2rem;
+        }
+
         &:nth-child(5) {
           margin-left: 8rem;
           margin-right: -2rem;
+
+          @include respond(laptop) {
+            margin-left: 5rem;
+          }
+
+          @include respond(tablet) {
+            margin-left: 4rem;
+            margin-right: 0;
+          }
         }
 
         & a{
@@ -76,10 +110,19 @@
     transform: translateY(-50%);
     width: 60rem;
 
+    @include respond(laptop) {
+      width: 50rem;
+    }
+
     & h1 {
       font-size: 5.5rem;
       color: #fff;
       margin-bottom: 4rem;
+
+      @include respond(laptop) {
+        font-size: 4rem;
+        margin-bottom: 3rem;
+      }
     }
 
     & a {
@@ -89,6 +132,10 @@
       color: #fff;
       text-transform: uppercase;
       border-bottom: .3rem solid #fff;
+
+      @include respond(laptop) {
+        font-size: 1.1rem;
+      }
     }
   }
 }

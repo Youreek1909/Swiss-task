@@ -3,6 +3,14 @@
   background-color: $color-blue;
   padding: 20rem 20rem 4rem 20rem;
 
+  @include respond(laptop) {
+    padding: 20rem 15rem 2rem 15rem;
+  }
+
+  @include respond(tablet) {
+    padding: 20rem 10rem 2rem 10rem;
+  }
+
   &__span-top--left {
     clip-path: polygon(100% 0, 0 0, 0 30%);
     background-color: #fff;
@@ -16,29 +24,45 @@
     &-col {
       width: 50%;
 
-      &-wrapper {
+      &--wrapper {
         display: flex;
 
         &-logo {
           width: 60%;
           padding: 0 4rem;
 
-          &-img {
-            max-width: 100%;
+          @include respond(laptop) {
+            padding: 0 3rem 0 0;
+          }
 
-            &-webhelp {
-              transform: scale(1.4);
-              margin-top: -2rem;
+          & img {
+            max-width: 100%;
+          }
+
+          &-webhelp {
+            transform: scale(1.4);
+            margin-top: -2rem;
+
+            @include respond(laptop) {
+              margin-top: -1rem;
             }
           }
         }
 
         &-address {
           width: 40%;
-          
+
+          @include respond(laptop) {
+            width: 50%;
+          }
+
           & p {
             color: #fff;
             font-size: 1.4rem;
+
+            @include respond(tablet) {
+              font-size: 1.2rem;
+            }
           }
 
           & p:first-child {
@@ -55,6 +79,10 @@
 
       &--right {
         margin-left: 15rem;
+
+        @include respond(tablet) {
+          margin-left: 10rem;
+        }
       }
     }
   }
@@ -67,6 +95,10 @@
         display: inline-block;
         margin-right: 1rem;
         font-size: 1.3rem;
+
+        @include respond(tablet) {
+          margin-right: 3rem;
+        }
 
         & a {
           text-decoration: none;

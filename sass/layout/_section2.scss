@@ -7,21 +7,37 @@
     clip-path: polygon(100% 0, 100% 20%, 0 0);
     background-color: #fff;
     @include clip-full;
+
+    @include respond(mobile-lg) {
+      clip-path: polygon(100% 0, 100% 14%, 0 0);
+    }
   }
   &__span-top--left {
     clip-path: polygon(0 0, 0 20%, 50% 10%);
     background-color: $color-cyan;
     @include clip-full;
+
+    @include respond(mobile-lg) {
+      clip-path: polygon(0 0, 0 14%, 50% 7%);
+    }
   }
   &__span-bottom--right {
     clip-path: polygon(100% 80%, 100% 100%, 35% 100%);
     background-color: rgba($color-blue, 0.8);
     @include clip-full;
+
+    @include respond(mobile-lg) {
+      clip-path: polygon(100% 86%, 100% 100%, 35% 100%);
+    }
   }
   &__span-bottom--left{
     clip-path: polygon(0 89%, 0 100%, 35% 100%);
     background-color: #fff;
     @include clip-full;
+
+    @include respond(mobile-lg) {
+      clip-path: polygon(0 92%, 0 100%, 35% 100%);
+    }
   }
 
 
@@ -43,6 +59,10 @@
       position: absolute;
       right: 3%;
       bottom: 7%;
+
+      @include respond(mobile-lg) {
+        bottom: 3%;
+      }
 
       &--dot {
         cursor: pointer;

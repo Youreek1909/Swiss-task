@@ -12,5 +12,15 @@
     @include respond(tablet) {
       padding: 7rem 15rem;
     }
+
+    @include respond(mobile-lg) {
+      padding: 7rem 5rem;
+      font-size: 1.7rem;
+      text-align: center;
+    }
+
+    @include respond(mobile-sm) {
+      padding: 7rem 3rem;
+    }
   }
 }

@@ -11,10 +11,22 @@
     padding: 20rem 10rem 2rem 10rem;
   }
 
+  @include respond(mobile-lg) {
+    padding: 8rem 5rem 2rem 5rem;
+  }
+
+  @include respond(mobile-md) {
+    padding: 8rem 3rem 2rem 3rem;
+  }
+
   &__span-top--left {
     clip-path: polygon(100% 0, 0 0, 0 30%);
     background-color: #fff;
     @include clip-full;
+
+    @include respond(mobile-lg) {
+      clip-path: polygon(100% 0, 0 0, 0 12%);
+    }
   }
 
   &__row {
@@ -27,12 +39,22 @@
       &--wrapper {
         display: flex;
 
+        @include respond(mobile-lg) {
+          display: block;
+        }
+
         &-logo {
           width: 60%;
           padding: 0 4rem;
 
           @include respond(laptop) {
             padding: 0 3rem 0 0;
+          }
+
+          @include respond(mobile-lg) {
+            width: 100%;
+            text-align: center;
+            padding: 2rem;
           }
 
           & img {
@@ -46,6 +68,10 @@
             @include respond(laptop) {
               margin-top: -1rem;
             }
+
+            @include respond(mobile-sm) {
+              margin-top: 0;
+            }
           }
         }
 
@@ -54,6 +80,11 @@
 
           @include respond(laptop) {
             width: 50%;
+          }
+
+          @include respond(mobile-lg) {
+            width: 100%;
+            text-align: center;
           }
 
           & p {
@@ -83,6 +114,15 @@
         @include respond(tablet) {
           margin-left: 10rem;
         }
+
+        @include respond(mobile-lg) {
+          margin-top: -2rem;
+          margin-left: 5rem;
+        }
+
+        @include respond(mobile-md) {
+          margin-left: 3.4rem;
+        }
       }
     }
   }
@@ -93,12 +133,8 @@
     &-list {
       & li {
         display: inline-block;
-        margin-right: 1rem;
+        margin: 0 1rem;
         font-size: 1.3rem;
-
-        @include respond(tablet) {
-          margin-right: 3rem;
-        }
 
         & a {
           text-decoration: none;

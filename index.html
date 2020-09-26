@@ -40,6 +40,33 @@
         </li>
       </ul>
     </div>
+    <div class="hero__nav--mobile">
+      <input type="checkbox" id="menu" class="hero__nav--mobile-toggle">
+      <label for="menu" class="hero__nav--mobile-label"></label>
+      <div class="hero__nav--mobile-content">
+        <img src="img/microsoft.png" alt="logo" class="hero__nav--mobile-content__logo">
+        <div class="hero__nav--mobile-content__menu">
+          <ul class="hero__nav--mobile-content__menu-list">
+            <li>
+              <a href="#">MIETFLÄCHEN</a>
+            </li>
+            <li>
+              <a href="#">architektur</a>
+            </li>
+            <li>
+              <a href="#">lage</a>
+            </li>
+            <li>
+              <a href="#">kontakt</a>
+            </li>
+          </ul>
+        </div>
+        <div class="hero__nav--mobile-content__menu-lang">
+          <p>de</p>
+          <p>en</p>
+        </div>
+      </div>
+    </div>
     <div class="hero__info">
       <h1>Lorem ipsum dolor sit amet</h1>
       <a href="#">erfahren sie mehr</a>
@@ -145,68 +172,58 @@
           </li>
         </ul>
       </div>
-      <div class="section5__wrapper-collapsible">
-        <input type="checkbox" id="collapsible" class="section5__wrapper-collapsible-toggle">
-        <label for="collapsible" class="section5__wrapper-collapsible-lbl-toggle">In der Nähe</label>
-        <div class="section5__wrapper-collapsible-content">
-          <div class="section5__wrapper-collapsible-content-row">
-            <div class="section5__wrapper-collapsible-content-row-col section5__wrapper-collapsible-content-row-col-left">
-              <ul class="section5__wrapper-collapsible-content-row-col-left-list">
-                <li>
-                  International School Zurich North
-                </li>
-                <li>
-                  Wald (Grindel Naturschutzgebiet)
-                </li>
-                <li>
-                  Glattzentrum
-                </li>
-                <li>
-                  Bahnhof Wallisellen
-                </li>
-                <li>
-                  Post
-                </li>
-                <li>
-                  Migros, Coop, Aldi, Lidl
-                </li>
-                <li>
-                  UBS & ZKB
-                </li>
-              </ul>
-            </div>
-            <div class="section5__wrapper-collapsible-row-col section5__wrapper-collapsible-row-col-right">
-              <ul class="section5__wrapper-collapsible-content-row-col-right-list">
-                <li>
-                  <i class="fas fa-walking"></i>
-                  3 min &middot;  <span>200m</span>
-                </li>
-                <li>
-                  <i class="fas fa-walking"></i>
-                  5 min &middot; <span>250m</span>
-                </li>
-                <li>
-                  <i class="fas fa-walking"></i>
-                  8 min &middot; <span>300m</span>
-                </li>
-                <li>
-                  <i class="fas fa-walking"></i>
-                  7 min &middot; <span>350m</span>
-                </li>
-                <li>
-                  <i class="fas fa-walking"></i>
-                  7 min &middot; <span>400m</span>
-                </li>
-                <li>
-                  <i class="fas fa-walking"></i>
-                  7-10 min &middot; <span>400-500m</span>
-                </li>
-                <li>
-                  <i class="fas fa-walking"></i>
-                  8 min &middot; <span>400-500m</span>
-                </li>
-              </ul>
-            </div>
+      <div class="section5__wrapper--collapsible">
+        <input type="checkbox" id="collapsible" class="section5__wrapper--collapsible-toggle">
+        <label for="collapsible" class="section5__wrapper--collapsible-lbl-toggle">In der Nähe</label>
+        <div class="section5__wrapper--collapsible-content">
+          <div class="section5__wrapper--collapsible-content__row">
+            <p>International School Zurich North</p>
+            <p>
+              <i class="fas fa-walking"></i>
+              3 min &middot;  <span>200m</span>
+            </p>
+          </div>
+          <div class="section5__wrapper--collapsible-content__row">
+            <p>Wald (Grindel Naturschutzgebiet)</p>
+            <p>
+              <i class="fas fa-walking"></i>
+              5 min &middot; <span>250m</span>
+            </p>
+          </div>
+          <div class="section5__wrapper--collapsible-content__row">
+            <p>Glattzentrumh</p>
+            <p>
+              <i class="fas fa-walking"></i>
+              8 min &middot; <span>300m</span>
+            </p>
+          </div>
+          <div class="section5__wrapper--collapsible-content__row">
+            <p>Bahnhof Wallisellen</p>
+            <p>
+              <i class="fas fa-walking"></i>
+              7 min &middot; <span>350m</span>
+            </p>
+          </div>
+          <div class="section5__wrapper--collapsible-content__row">
+            <p>Post</p>
+            <p>
+              <i class="fas fa-walking"></i>
+              7 min &middot; <span>400m</span>
+            </p>
+          </div>
+          <div class="section5__wrapper--collapsible-content__row">
+            <p>Migros, Coop, Aldi, Lidl</p>
+            <p>
+              <i class="fas fa-walking"></i>
+              7-10 min &middot; <span>400-500m</span>
+            </p>
+          </div>
+          <div class="section5__wrapper--collapsible-content__row">
+            <p>UBS & ZKB</p>
+            <p>
+              <i class="fas fa-walking"></i>
+              8 min &middot; <span>400-500m</span>
+            </p>
           </div>
         </div>
       </div>
@@ -265,7 +282,7 @@
     <div class="footer__row">
       <div class="footer__row-col footer-row-col--left">
         <div class="footer__row-col--wrapper">
-          <div class="footer__row-col--wrapper-logo">
+          <div class="footer__row-col--wrapper-logo mb18">
             <img src="img/canon.png" alt="logo">
           </div>
           <div class="footer__row-col--wrapper-address">

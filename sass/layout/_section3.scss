@@ -7,11 +7,19 @@
         clip-path: polygon(0 0, 0 9%, 35% 0);
         background-color: #fff;
         @include clip-full;
+
+        @include respond(mobile-lg) {
+          clip-path: polygon(0 0, 0 6%, 35% 0);
+        }
       }
       &--right {
         clip-path: polygon(100% 0, 35% 0, 100% 17%);
         background-color: $color-blue;
         @include clip-full;
+
+        @include respond(mobile-lg) {
+          clip-path: polygon(100% 0, 35% 0, 100% 11%);
+        }
       }
     }
     &-bottom {
@@ -19,6 +27,10 @@
         clip-path: polygon(0 82%, 0% 100%, 65% 100%);
         background-color: rgba($color-cyan, 0.8);
       @include clip-full;
+
+      @include respond(mobile-lg) {
+        clip-path: polygon(0 90%, 0% 100%, 65% 100%);
+      }
       }
     }
   }
@@ -27,9 +39,19 @@
     height: 85vh;
     display: flex;
 
+    @include respond(mobile-lg) {
+      display: block;
+      height: auto;
+    }
+
     &-col {
       &--left {
         max-width: 50%;
+
+        @include respond(mobile-lg) {
+          max-width: 100%;
+          height: 30rem;
+        }
 
         & img {
           width: 100%;
@@ -50,6 +72,12 @@
           padding: 10rem 7rem;
         }
 
+        @include respond(mobile-lg) {
+          max-width: 100%;
+          padding: 5rem 5rem 8rem 5rem;
+          text-align: center;
+        }
+
         & h1 {
           font-size: 3rem;
           padding-bottom: 2rem;
@@ -61,6 +89,10 @@
 
           @include respond(tablet) {
             font-size: 2.2rem;
+          }
+
+          @include respond(mobile-lg) {
+            font-size: 2rem;
           }
         }
 

@@ -15,18 +15,30 @@
     background-color: $color-pink;
     clip-path: polygon(0 0, 0 30%, 50% 0);
     @include clip-full;
+
+    @include respond(mobile-lg) {
+      clip-path: polygon(0 0, 0 20%, 70% 0);
+    }
   }
 
   &__span-bottom {
     clip-path: polygon(50% 92%, 0 100%, 100% 100%);
     @include clip-full;
     background-color: #fff;
+
+    @include respond(mobile-lg) {
+      clip-path: polygon(50% 95%, 0 100%, 100% 100%);
+    }
   }
 
   &__span-right {
     clip-path: polygon(50% 92%, 100% 100%, 100% 84%);
     @include clip-full;
     background-color: rgba($color-pink, 0.8);
+
+    @include respond(mobile-lg) {
+      clip-path: polygon(50% 95%, 100% 100%, 100% 90%);
+    }
   }
 
   &__logo  {
@@ -43,6 +55,18 @@
       left: 3rem;
     }
 
+    @include respond(mobile-lg) {
+      top: 3rem;
+    }
+
+    @include respond(mobile-md) {
+      width: 10rem;
+    }
+
+    @include respond(mobile-sm) {
+      left: 2rem;
+    }
+
     & img {
       width: 100%;
       overflow: hidden;
@@ -56,6 +80,10 @@
 
     @include respond(tablet) {
       right: 3rem;
+    }
+
+    @include respond(mobile-lg) {
+      display: none;
     }
 
     &-list{
@@ -101,6 +129,124 @@
         }
       }
     }
+
+    &--mobile {
+      position: relative;
+      display: none;
+
+      @include respond(mobile-lg) {
+        display: block;
+      }
+
+      input[type="checkbox"] {
+        display: none;
+      }
+
+      &-label {
+        position: absolute;
+        top: 4.5rem;
+        right: 4rem;
+        cursor: pointer;
+        z-index: 101;
+
+        @include respond(mobile-sm) {
+          right: 2.5rem;
+        }
+
+        &,
+        &::before,
+        &::after {
+          width: 2rem;
+          height: .2rem;
+          background-color: $color-pink;
+          transition: all .4s ease;
+        }
+
+        &::before,
+        &::after {
+          content: '';
+          position: absolute;
+        }
+
+        &::before {
+          bottom: .6rem;
+        }
+
+        &::after {
+          top: .6rem;
+        }
+      }
+
+      &-content {
+        color: #fff;
+        padding: 3rem;
+        background-color: $color-blue;
+        display: none;
+        height: 100vh;
+        position: absolute;
+        @include clip-full;
+        z-index: 100;
+
+        &__logo {
+          width: 12rem;
+          margin-bottom: 5rem;
+
+          @include respond(mobile-md) {
+            width: 10rem;
+          }
+
+          @include respond(mobile-sm) {
+            margin-left: -1rem;
+          }
+
+          & img {
+            width: 100%;
+          }
+        }
+
+        &__menu {
+          padding: 3rem;
+
+           &-list {
+             margin-bottom: 10rem;
+            & li {
+              list-style: none;
+              margin-bottom: 5rem;
+
+              & a {
+               text-decoration: none;
+               color: #fff;
+               text-transform: uppercase;
+               font-size: 2rem;
+               font-weight: bold;
+               transition: color .4s ease;
+
+                &:hover {
+                  color: $color-pink;
+                }
+              }
+            }
+          }
+
+          &-lang {
+           display: flex;
+           justify-content: center;
+
+            & p {
+              text-transform: uppercase;
+              font-size: 1.7rem;
+              font-weight: bold;
+              padding: 0 2rem;
+
+              &:last-child {
+                color: rgba(#fff, .5);
+                border-left: 1px solid #fff;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 
   &__info {
@@ -114,6 +260,19 @@
       width: 50rem;
     }
 
+    @include respond(mobile-lg) {
+      width: 40rem;
+    }
+
+    @include respond(mobile-md) {
+      width: 30rem;
+    }
+
+    @include respond(mobile-sm) {
+      width: 25rem;
+    }
+
+
     & h1 {
       font-size: 5.5rem;
       color: #fff;
@@ -122,6 +281,14 @@
       @include respond(laptop) {
         font-size: 4rem;
         margin-bottom: 3rem;
+      }
+
+      @include respond(mobile-lg) {
+        font-size: 3rem;
+      }
+
+      @include respond(mobile-sm) {
+        font-size: 2.5rem;
       }
     }
 
@@ -138,4 +305,24 @@
       }
     }
   }
+}
+
+.hero__nav--mobile-toggle:checked + .hero__nav--mobile-label + .hero__nav--mobile-content{
+  display: block;
+}
+
+.hero__nav--mobile-toggle:checked + .hero__nav--mobile-label{
+  background-color: transparent;
+}
+
+.hero__nav--mobile-toggle:checked + .hero__nav--mobile-label::before {
+  transform: rotate(45deg);
+  top: 0;
+  background-color: #fff;
+}
+
+.hero__nav--mobile-toggle:checked + .hero__nav--mobile-label::after {
+  transform: rotate(-45deg);
+  top: 0;
+  background-color: #fff;
 }

@@ -7,11 +7,19 @@
       clip-path: polygon(0 0, 0 9%, 35% 0);
       background-color: #fff;
       @include clip-full;
+
+      @include respond(mobile-lg) {
+        clip-path: polygon(0 0, 0 4%, 35% 0);
+      }
     }
     &-bottom--left {
-      clip-path: polygon(0 83%, 0% 100%, 100% 100%);
+      clip-path: polygon(0 83%, 0 100%, 100% 100%);
       background-color: #fff;
       @include clip-full;
+
+      @include respond(mobile-lg) {
+        clip-path: polygon(0 92%, 0% 100%, 100% 100%);
+      }
     }
   }
 
@@ -27,12 +35,20 @@
       padding: 8rem 5rem;
     }
 
+    @include respond(mobile-lg) {
+      padding: 8rem 0;
+    }
+
     & h1 {
       color: #fff;
       font-size: 3rem;
 
       @include respond(laptop) {
         font-size: 2.4rem;
+      }
+
+      @include respond(mobile-lg) {
+        font-size: 2rem;
       }
     }
 
@@ -41,6 +57,10 @@
 
       @include respond(laptop) {
         padding: 10rem 0;
+      }
+
+      @include respond(mobile-lg) {
+        padding: 4rem 0;
       }
 
       &--list {
@@ -57,6 +77,13 @@
           @include respond(tablet) {
             height: 2rem;
             margin-right: 4rem;
+          }
+
+          @include respond(mobile-lg) {
+            display: block;
+            margin-right: 0;
+            margin-bottom: 6rem;
+            height: 2.5rem;
           }
 
           &:nth-child(4) {
@@ -80,11 +107,15 @@
             @include respond(tablet) {
               font-size: 3rem;
             }
+
+            @include respond(mobile-lg) {
+              transform: rotate(90deg);
+            }
           }
         }
       }
     }
-    &-collapsible {
+    &--collapsible {
 
       input[type="checkbox"] {
         display: none;
@@ -113,6 +144,7 @@
           }
         }
       }
+
       &-content {
         margin: 5rem 0;
         padding: 0 25rem;
@@ -121,63 +153,67 @@
         transition: max-height 0.25s ease-in-out;
 
         @include respond(laptop) {
-          padding: 0 15rem;
-        }
-
-        @include respond(tablet) {
           padding: 0 10rem;
         }
 
-        &-row {
+        @include respond(tablet) {
+          padding: 0 6rem;
+        }
+
+        @include respond(mobile-md) {
+          padding: 0 5rem;
+        }
+
+        &__row {
           display: flex;
 
-          &-col {
+          @include respond(mobile-lg) {
+            display: block;
+          }
+
+          & p {
+            font-size: 1.6rem;
+            color: #fff;
             width: 50%;
+            text-align: left;
+            margin-bottom: 2rem;
 
-            &-left {
+            @include respond(laptop) {
+              font-size: 1.4rem;
+            }
 
-              &-list {
-                list-style: none;
+            @include respond(mobile-lg) {
+              width: 100%;
+            }
 
-                & li {
-                  text-align: left;
-                  font-size: 1.6rem;
-                  color: #fff;
-                  margin-bottom: 2.5rem;
-
-                  @include respond(laptop) {
-                    font-size: 1.2rem;
-                    margin-bottom: 2rem;
-                  }
-                }
+            &:first-child {
+              @include respond(mobile-lg) {
+                margin-bottom: 1rem;
               }
             }
-            &-right {
 
-              &-list {
-                padding-left: 5rem;
-                list-style: none;
+            &:last-child {
+              margin-left: 15rem;
 
-                & li {
-                  text-align: left;
-                  font-size: 1.6rem;
-                  color: #fff;
-                  margin-bottom: 2.5rem;
-
-                  @include respond(laptop) {
-                    font-size: 1.2rem;
-                    margin-bottom: 2rem;
-                  }
-
-                  & span {
-                    color: #8195C9;
-                  }
-
-                  & i {
-                    margin-right: 1rem;
-                  }
-                }
+              @include respond(laptop) {
+                margin-left: 6rem;
               }
+
+              @include respond(mobile-lg) {
+                margin-left: 0;
+              }
+            }
+
+            & span {
+              color: #8195C9;
+            }
+
+            & i {
+              margin-right: 1rem;
+            }
+
+            @include respond(mobile-lg) {
+              font-size: 1.2rem;
             }
           }
         }
@@ -186,9 +222,9 @@
   }
 }
 
-.section5__wrapper-collapsible-toggle:checked + .section5__wrapper-collapsible-lbl-toggle + .section5__wrapper-collapsible-content {
+.section5__wrapper--collapsible-toggle:checked + .section5__wrapper--collapsible-lbl-toggle + .section5__wrapper--collapsible-content {
   max-height: 50rem;
 }
-.section5__wrapper-collapsible-toggle:checked + .section5__wrapper-collapsible-lbl-toggle::before {
+.section5__wrapper--collapsible-toggle:checked + .section5__wrapper--collapsible-lbl-toggle::before {
   content: "\f106";
 }

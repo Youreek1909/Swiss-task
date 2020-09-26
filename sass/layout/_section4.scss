@@ -7,6 +7,10 @@
         clip-path: polygon(0 0, 100% 19%, 100% 0);
         background-color: $color-blue;
         @include clip-full;
+
+        @include respond(mobile-lg) {
+          clip-path: polygon(0 0, 100% 10%, 100% 0);
+        }
       }
     }
     &-bottom {
@@ -14,6 +18,10 @@
         clip-path: polygon(100% 82%, 35% 100%, 100% 100%);
         background-color: rgba($color-blue, 0.8);
         @include clip-full;
+
+        @include respond(mobile-lg) {
+          clip-path: polygon(100% 90%, 35% 100%, 100% 100%);
+        }
       }
     }
   }
@@ -22,10 +30,20 @@
     height: 85vh;
     display: flex;
 
+    @include respond(mobile-lg) {
+      display: block;
+      height: auto;
+    }
+
     &-col {
 
       &--left {
         max-width: 50%;
+
+        @include respond(mobile-lg) {
+          max-width: 100%;
+          height: 30rem;
+        }
 
         & img {
           width: 100%;
@@ -47,6 +65,12 @@
           padding: 10rem 7rem;
         }
 
+        @include respond(mobile-lg) {
+          max-width: 100%;
+          padding: 8rem 5rem 5rem 5rem;
+          text-align: center;
+        }
+
         & h1 {
           font-size: 3rem;
           padding-bottom: 2rem;
@@ -59,6 +83,10 @@
           @include respond(tablet) {
             font-size: 2.2rem;
           }
+
+          @include respond(mobile-lg) {
+            font-size: 2rem;
+          }
         }
 
         & p {
@@ -68,6 +96,7 @@
           @include respond(laptop) {
             font-size: 1.3rem;
           }
+
         }
       }
     }

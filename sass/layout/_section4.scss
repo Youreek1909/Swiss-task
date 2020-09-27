@@ -27,7 +27,7 @@
   }
 
   &__row {
-    height: 85vh;
+    //height: 85vh;
     display: flex;
 
     @include respond(mobile-lg) {

@@ -1,10 +1,14 @@
 .hero {
   background-image: url('https://picsum.photos/id/579/1500/1000');
-  height: 100vh;
+  height: 75rem;
   position: relative;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
+  @include respond(mobile-lg) {
+    height: 65rem;
+  }
 
   &__background {
     @include clip-full;
@@ -182,10 +186,14 @@
         padding: 3rem;
         background-color: $color-blue;
         display: none;
-        height: 100vh;
+        height: 75rem;
         position: absolute;
         @include clip-full;
         z-index: 100;
+
+        @include respond(mobile-lg) {
+          height: 65rem;
+        }
 
         &__logo {
           width: 12rem;
@@ -220,10 +228,6 @@
                font-size: 2rem;
                font-weight: bold;
                transition: color .4s ease;
-
-                &:hover {
-                  color: $color-pink;
-                }
               }
             }
           }
@@ -261,7 +265,7 @@
     }
 
     @include respond(mobile-lg) {
-      width: 40rem;
+      width: 35rem;
     }
 
     @include respond(mobile-md) {

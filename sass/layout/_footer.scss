@@ -60,19 +60,6 @@
           & img {
             max-width: 100%;
           }
-
-          &-webhelp {
-            transform: scale(1.4);
-            margin-top: -2rem;
-
-            @include respond(laptop) {
-              margin-top: -1rem;
-            }
-
-            @include respond(mobile-sm) {
-              margin-top: 0;
-            }
-          }
         }
 
         &-address {

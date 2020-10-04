@@ -6,12 +6,14 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
   <script src="https://kit.fontawesome.com/cacb8ebc8b.js"></script>
   <title>Swiss-task</title>
 </head>
 <body>
   <div class="hero">
-    <div class="hero__background"></div>
+    <img src="https://picsum.photos/id/579/1500/1000" alt="Pic" class="hero__background">
+    <div class="hero__gradient"></div>
     <span class="hero__span-top"></span>
     <span class="hero__span-bottom"></span>
     <span class="hero__span-right"></span>
@@ -130,7 +132,7 @@
     <span class="section4__span-top--right"></span>
     <span class="section4__span-bottom--right"></span>
     <div class="section4__row">
-      <div class="section4__row-col--right">
+      <div class="section4__row-col--left">
         <h1>
           Lorem ipsum dolor sit amet, consectetur
         </h1>
@@ -138,8 +140,28 @@
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit magnam repellat, dolores ad dolorem ullam accusantium enim veniam fugit qui, tempore eveniet molestiae adipisci? Explicabo, eaque porro earum! Porro, aliquam! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos debitis deleniti voluptatibus aliquam architecto asperiores distinctio delectus fugit optio dicta, provident aperiam ab suscipit molestias at quibusdam modi, dolorum veritatis!
         </p>
       </div>
-      <div class="section4__row-col--left">
-        <img src="https://picsum.photos/id/743/1500/700" alt="Foto">
+      <div class="section4__row-col--right">
+        <div class="splide">
+          <div class="splide__track">
+            <div class="splide__list">
+              <div class="splide__slide">
+                <img src="https://picsum.photos/id/743/800/800" alt="Foto">
+              </div>
+              <div class="splide__slide">
+                <img src="https://picsum.photos/id/43/800/800" alt="Foto">
+              </div>
+              <div class="splide__slide">
+                <img src="https://picsum.photos/id/13/800/800" alt="Foto">
+              </div>
+              <div class="splide__slide">
+                <img src="https://picsum.photos/id/423/800/800" alt="Foto">
+              </div>
+              <div class="splide__slide">
+                <img src="https://picsum.photos/id/413/800/800" alt="Foto">
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -314,7 +336,7 @@
     </div>
   </div>
 
-
-<script src="js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>

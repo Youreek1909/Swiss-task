@@ -1,3 +1,5 @@
+///// First Slide (section2)
+
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -26,3 +28,11 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " section2__slideshow-dots--dot-active";
 }
+
+
+///// Second Slide (section4)
+let secondSlide = new Splide('.splide',{
+  'type': 'loop',
+  'arrows': false,
+  'autoplay': true
+}).mount();

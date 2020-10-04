@@ -1,16 +1,19 @@
 .hero {
-  background-image: url('https://picsum.photos/id/579/1500/1000');
   height: 75rem;
   position: relative;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 
   @include respond(mobile-lg) {
     height: 65rem;
   }
 
   &__background {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__gradient {
     @include clip-full;
     background: linear-gradient(90deg, rgba(0,33,64,1) 0%, rgba(0,33,64,0) 100%);
   }
@@ -135,7 +138,7 @@
     }
 
     &--mobile {
-      position: relative;
+      //position: relative;
       display: none;
 
       @include respond(mobile-lg) {
